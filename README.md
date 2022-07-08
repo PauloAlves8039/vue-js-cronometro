@@ -1,24 +1,13 @@
-# cronometro
+<h1 align="center">Cronometro</h1>
 
-## Project setup
-```
-npm install
-```
+## :computer: Projeto
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Aplicação web para simular o uso de um cronometro desenvolvido com Vue CLI, código fonte do projeto foi baseado no curso
+[Vue JS do zero ao avançado na pratica](https://www.udemy.com/course/curso-vuejs-completo/).
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## :floppy_disk: Clonar Repositório
 
-### Lints and fixes files
-```
-npm run lint
-```
+`git clone https://github.com/PauloAlves8039/vue-js-cronometro.git`
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Author
+:boy: [Paulo Alves](https://github.com/PauloAlves8039)
