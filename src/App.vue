@@ -8,6 +8,13 @@
       <button class="botao" @click="limpar">LIMPAR</button>
     </div>
 
+    <div class="list" v-show="historico.length > 0">
+      <ul>
+        <li v-for="item in historico" :key="item">VOCÊ FEZ UMA PAUSA EM: {{item}}</li>
+      </ul>
+      <button @click="limparHistorico()">Limpar Historico</button>
+    </div>
+
   </div>
 </template>
 
@@ -22,7 +29,8 @@ export default {
       timer: null,
       ss:0,
       mm: 0,
-      hh: 0
+      hh: 0,
+      historico: []
     }
   },
   methods: {
@@ -32,6 +40,10 @@ export default {
         clearInterval(this.timer);
         this.timer = null;
         this.botao = 'VAI';
+
+        if(this.ss !== 0){
+          this.historico.push(this.numero);
+        }
 
       }else{
         this.timer = setInterval(()=> {
@@ -53,7 +65,11 @@ export default {
       this.hh = 0;
       this.numero = 0;
       this.botao = 'VAI';
+      this.limparHistorico();
 
+    },
+    limparHistorico(){
+      this.historico = [];
     },
     rodarTimer(){
       this.ss++;
@@ -123,6 +139,30 @@ export default {
   .botao:hover{
     opacity: 0.8;
     transition: all 0.50s;
+  }
+
+  ul{
+    text-align: center;
+    padding: 0px;
+  }
+
+  ul li{
+    margin-top: 4px;
+    padding: 15px;
+    background-color: rgb(70, 70, 70);
+    list-style: none;
+    color: #FFF;
+    font-size: 18px;
+    border-radius: 6px;
+  }
+
+  .list button{
+    cursor: pointer;
+    border: 0;
+    background-color: #FFF;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 12px;
   }
 
 </style>
