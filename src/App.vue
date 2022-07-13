@@ -12,7 +12,7 @@
       <ul>
         <li v-for="item in historico" :key="item">VOCÊ FEZ UMA PAUSA EM: {{item}}</li>
       </ul>
-      <button @click="limparHistorico()">Limpar Historico</button>
+      <button class="botao-limpar-historico" @click="limparHistorico()">Limpar Histórico</button>
     </div>
 
   </div>
@@ -139,6 +139,11 @@ export default {
   .botao:hover{
     opacity: 0.8;
     transition: all 0.50s;
+  }
+
+  .botao-limpar-historico{
+    width: 350px;
+    font-size: 18px;
   }
 
   ul{
