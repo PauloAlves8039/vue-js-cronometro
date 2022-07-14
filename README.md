@@ -14,5 +14,9 @@ Aplicação web para simular o uso de um cronometro desenvolvido com Vue CLI, c�
 
 `git clone https://github.com/PauloAlves8039/vue-js-cronometro.git`
 
+## :camera: Aplicação
+
+![screenshot](https://github.com/PauloAlves8039/vue-js-cronometro/blob/master/src/assets/screenshot.png)
+
 ## Author
 :boy: [Paulo Alves](https://github.com/PauloAlves8039)
